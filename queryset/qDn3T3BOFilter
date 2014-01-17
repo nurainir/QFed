@@ -1,0 +1,1502 @@
+#1#
+select * { 
+ ?s1 a <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/drugs> . 
+ ?s1 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/possibleDiseaseTarget> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?URI .
+OPTIONAL {
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/classDegree> ?LITERAL .
+}
+FILTER(?LITERAL >= 2) .
+ } 
+
+#2#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/1025> <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/possibleDiseaseTarget> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/classDegree> ?LITERAL .
+ } 
+
+#3#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/1015> <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/possibleDiseaseTarget> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/size> ?LITERAL .
+ } 
+
+#4#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/1002> <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/possibleDiseaseTarget> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/size> ?LITERAL .
+ } 
+
+
+#5#
+select * { 
+ ?s1 a <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer> . 
+ ?s1 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/possibleDiseaseTarget> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?URI .
+OPTIONAL {
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?LITERAL .
+}
+ } 
+
+#6#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/1057> <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/possibleDiseaseTarget> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/classDegree> ?LITERAL .
+ } 
+
+#7#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/1047> <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/possibleDiseaseTarget> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?LITERAL .
+ } 
+
+#8#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/1027> <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/possibleDiseaseTarget> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?LITERAL .
+ } 
+
+
+#9#
+select * { 
+ ?s1 a <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/drugs> . 
+ ?s1 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/genericDrug> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/brandedDrug> ?URI .
+OPTIONAL {
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/affectedOrganism> ?LITERAL .
+}
+ } 
+
+#10#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/1006> <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/genericDrug> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/brandedDrug> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/absorption> ?BIGLITERAL .
+ } 
+
+#11#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/1004> <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/genericDrug> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/brandedDrug> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/absorption> ?BIGLITERAL .
+ } 
+
+#12#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/1000> <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/genericDrug> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/brandedDrug> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/description> ?BIGLITERAL .
+ } 
+
+
+#13#
+select * { 
+ ?s1 a <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/drugs> . 
+ ?s1 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/genericDrug> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/brandedDrug> ?URI .
+OPTIONAL {
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/affectedOrganism> ?LITERAL .
+}
+ } 
+
+#14#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/1020> <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/genericDrug> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/brandedDrug> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/absorption> ?BIGLITERAL .
+ } 
+
+#15#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/1018> <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/genericDrug> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/brandedDrug> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/biotransformation> ?BIGLITERAL .
+ } 
+
+#16#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/1014> <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/genericDrug> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/brandedDrug> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/description> ?BIGLITERAL .
+ } 
+
+
+#17#
+select * { 
+ ?s1 a <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer> . 
+ ?s1 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/genericDrug> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/brandedDrug> ?URI .
+OPTIONAL {
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/affectedOrganism> ?LITERAL .
+}
+ } 
+
+#18#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/1042> <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/genericDrug> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/brandedDrug> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/absorption> ?BIGLITERAL .
+ } 
+
+#19#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/1039> <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/genericDrug> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/brandedDrug> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/brandMixture> ?BIGLITERAL .
+ } 
+
+#20#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/1032> <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/genericDrug> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/brandedDrug> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/absorption> ?BIGLITERAL .
+ } 
+
+
+#21#
+select * { 
+ ?s1 a <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer> . 
+ ?s1 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/genericDrug> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/brandedDrug> ?URI .
+OPTIONAL {
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/absorption> ?LITERAL .
+}
+ } 
+
+#22#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/1056> <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/genericDrug> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/brandedDrug> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/biotransformation> ?BIGLITERAL .
+ } 
+
+#23#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/1054> <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/genericDrug> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/brandedDrug> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/absorption> ?BIGLITERAL .
+ } 
+
+#24#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/1045> <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/genericDrug> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/brandedDrug> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/biotransformation> ?BIGLITERAL .
+ } 
+
+
+#25#
+select * { 
+ ?s1 a <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/drugs> . 
+ ?s1 <http://www.w3.org/2002/07/owl#sameAs> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/sideEffect> ?URI .
+OPTIONAL {
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/drugName> ?LITERAL .
+}
+ } 
+
+#26#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/1016> <http://www.w3.org/2002/07/owl#sameAs> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/sideEffect> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/drugName> ?LITERAL .
+ } 
+
+#27#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/1013> <http://www.w3.org/2002/07/owl#sameAs> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/sideEffect> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/drugName> ?LITERAL .
+ } 
+
+#28#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/1003> <http://www.w3.org/2002/07/owl#sameAs> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/sideEffect> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/drugName> ?LITERAL .
+ } 
+
+
+#29#
+select * { 
+ ?s1 a <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer> . 
+ ?s1 <http://www.w3.org/2002/07/owl#sameAs> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/sideEffect> ?URI .
+OPTIONAL {
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/drugName> ?LITERAL .
+}
+ } 
+
+#30#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/1037> <http://www.w3.org/2002/07/owl#sameAs> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/sideEffect> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/drugName> ?LITERAL .
+ } 
+
+#31#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/1033> <http://www.w3.org/2002/07/owl#sameAs> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/sideEffect> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/drugName> ?LITERAL .
+ } 
+
+#32#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/1023> <http://www.w3.org/2002/07/owl#sameAs> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/sideEffect> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/drugName> ?LITERAL .
+ } 
+
+
+#33#
+select * { 
+ ?s1 a <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases> . 
+ ?s1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/activeIngredient> ?URI .
+OPTIONAL {
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/fullName> ?LITERAL .
+}
+ } 
+
+#34#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/100> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/activeIngredient> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/adverseReaction> ?BIGLITERAL .
+ } 
+
+#35#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1004> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/activeIngredient> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/adverseReaction> ?BIGLITERAL .
+ } 
+
+#36#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/0> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/activeIngredient> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/adverseReaction> ?BIGLITERAL .
+ } 
+
+
+#37#
+select * { 
+ ?s1 a <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases> . 
+ ?s1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/activeIngredient> ?URI .
+OPTIONAL {
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/fullName> ?LITERAL .
+}
+ } 
+
+#38#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1023> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/activeIngredient> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/adverseReaction> ?BIGLITERAL .
+ } 
+
+#39#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1021> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/activeIngredient> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/adverseReaction> ?BIGLITERAL .
+ } 
+
+#40#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1019> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/activeIngredient> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/dosage> ?BIGLITERAL .
+ } 
+
+
+#41#
+select * { 
+ ?s1 a <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases> . 
+ ?s1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber> ?URI .
+OPTIONAL {
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/affectedOrganism> ?LITERAL .
+}
+ } 
+
+#42#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1025> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/description> ?BIGLITERAL .
+ } 
+
+#43#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1018> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/absorption> ?BIGLITERAL .
+ } 
+
+#44#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1017> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/description> ?BIGLITERAL .
+ } 
+
+
+#45#
+select * { 
+ ?s1 a <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases> . 
+ ?s1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber> ?URI .
+OPTIONAL {
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/affectedOrganism> ?LITERAL .
+}
+ } 
+
+#46#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1032> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/absorption> ?BIGLITERAL .
+ } 
+
+#47#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1031> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/description> ?BIGLITERAL .
+ } 
+
+#48#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1027> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/brandedDrug> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/description> ?BIGLITERAL .
+ } 
+
+
+#49#
+select * { 
+ ?s1 a <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases> . 
+ ?s1 <http://www.w3.org/2002/07/owl#sameAs> ?s2 . 
+?s2 <http://www.w3.org/2002/07/owl#sameAs> ?URI .
+OPTIONAL {
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/sideEffectId> ?LITERAL .
+}
+ } 
+
+#50#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1056> <http://www.w3.org/2002/07/owl#sameAs> ?s2 . 
+?s2 <http://www.w3.org/2002/07/owl#sameAs> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/sideEffectId> ?LITERAL .
+ } 
+
+#51#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1043> <http://www.w3.org/2002/07/owl#sameAs> ?s2 . 
+?s2 <http://www.w3.org/2002/07/owl#sameAs> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/sideEffectId> ?LITERAL .
+ } 
+
+#52#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1036> <http://www.w3.org/2002/07/owl#sameAs> ?s2 . 
+?s2 <http://www.w3.org/2002/07/owl#sameAs> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/sideEffectId> ?LITERAL .
+ } 
+
+
+#53#
+select * { 
+ ?s1 a <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs> . 
+ ?s1 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/brandedDrug> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/activeIngredient> ?URI .
+OPTIONAL {
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/fullName> ?LITERAL .
+}
+ } 
+
+#54#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00004> <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/brandedDrug> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/activeIngredient> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/boxedWarning> ?BIGLITERAL .
+ } 
+
+#55#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00002> <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/brandedDrug> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/activeIngredient> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/boxedWarning> ?BIGLITERAL .
+ } 
+
+#56#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00001> <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/brandedDrug> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/activeIngredient> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/adverseReaction> ?BIGLITERAL .
+ } 
+
+
+#57#
+select * { 
+ ?s1 a <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs> . 
+ ?s1 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/brandedDrug> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/activeIngredient> ?URI .
+OPTIONAL {
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/fullName> ?LITERAL .
+}
+ } 
+
+#58#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00020> <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/brandedDrug> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/activeIngredient> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/adverseReaction> ?BIGLITERAL .
+ } 
+
+#59#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00019> <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/brandedDrug> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/activeIngredient> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/adverseReaction> ?BIGLITERAL .
+ } 
+
+#60#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00013> <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/brandedDrug> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/activeIngredient> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/adverseReaction> ?BIGLITERAL .
+ } 
+
+
+#61#
+select * { 
+ ?s1 a <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer> . 
+ ?s1 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/brandedDrug> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/activeIngredient> ?URI .
+OPTIONAL {
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/fullName> ?LITERAL .
+}
+ } 
+
+#62#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00038> <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/brandedDrug> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/activeIngredient> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/adverseReaction> ?BIGLITERAL .
+ } 
+
+#63#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00031> <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/brandedDrug> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/activeIngredient> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/adverseReaction> ?BIGLITERAL .
+ } 
+
+#64#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00024> <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/brandedDrug> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/activeIngredient> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/adverseReaction> ?BIGLITERAL .
+ } 
+
+
+#65#
+select * { 
+ ?s1 a <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer> . 
+ ?s1 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/brandedDrug> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/activeIngredient> ?URI .
+OPTIONAL {
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/fullName> ?LITERAL .
+}
+ } 
+
+#66#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00053> <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/brandedDrug> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/activeIngredient> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/adverseReaction> ?BIGLITERAL .
+ } 
+
+#67#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00051> <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/brandedDrug> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/activeIngredient> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/boxedWarning> ?BIGLITERAL .
+ } 
+
+#68#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00049> <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/brandedDrug> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/activeIngredient> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/adverseReaction> ?BIGLITERAL .
+ } 
+
+
+#69#
+select * { 
+ ?s1 a <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs> . 
+ ?s1 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/possibleDiseaseTarget> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?URI .
+OPTIONAL {
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?LITERAL .
+}
+ } 
+
+#70#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00006> <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/possibleDiseaseTarget> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?LITERAL .
+ } 
+
+#71#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00005> <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/possibleDiseaseTarget> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/size> ?LITERAL .
+ } 
+
+#72#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00003> <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/possibleDiseaseTarget> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?LITERAL .
+ } 
+
+
+#73#
+select * { 
+ ?s1 a <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer> . 
+ ?s1 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/possibleDiseaseTarget> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?URI .
+OPTIONAL {
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?LITERAL .
+}
+ } 
+
+#74#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00012> <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/possibleDiseaseTarget> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?LITERAL .
+ } 
+
+#75#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00010> <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/possibleDiseaseTarget> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?LITERAL .
+ } 
+
+#76#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00009> <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/possibleDiseaseTarget> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?LITERAL .
+ } 
+
+
+#77#
+select * { 
+ ?s1 a <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs> . 
+ ?s1 <http://www.w3.org/2002/07/owl#sameAs> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/sideEffect> ?URI .
+OPTIONAL {
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/drugName> ?LITERAL .
+}
+ } 
+
+#78#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00145> <http://www.w3.org/2002/07/owl#sameAs> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/sideEffect> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/drugName> ?LITERAL .
+ } 
+
+#79#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00136> <http://www.w3.org/2002/07/owl#sameAs> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/sideEffect> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/drugName> ?LITERAL .
+ } 
+
+#80#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00107> <http://www.w3.org/2002/07/owl#sameAs> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/sideEffect> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/drugName> ?LITERAL .
+ } 
+
+
+#81#
+select * { 
+ ?s1 a <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer> . 
+ ?s1 <http://www.w3.org/2002/07/owl#sameAs> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/sideEffect> ?URI .
+OPTIONAL {
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/drugName> ?LITERAL .
+}
+ } 
+
+#82#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00162> <http://www.w3.org/2002/07/owl#sameAs> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/sideEffect> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/drugName> ?LITERAL .
+ } 
+
+#83#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00158> <http://www.w3.org/2002/07/owl#sameAs> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/sideEffect> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/drugName> ?LITERAL .
+ } 
+
+#84#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00153> <http://www.w3.org/2002/07/owl#sameAs> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/sideEffect> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/drugName> ?LITERAL .
+ } 
+
+
+#85#
+select * { 
+ ?s1 a <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/drugs> . 
+ ?s1 <http://www.w3.org/2002/07/owl#sameAs> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/activeIngredient> ?URI .
+OPTIONAL {
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/fullName> ?LITERAL .
+}
+ } 
+
+#86#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/sider/resource/drugs/104741> <http://www.w3.org/2002/07/owl#sameAs> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/activeIngredient> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/adverseReaction> ?BIGLITERAL .
+ } 
+
+#87#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/sider/resource/drugs/1046> <http://www.w3.org/2002/07/owl#sameAs> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/activeIngredient> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/fullName> ?LITERAL .
+ } 
+
+#88#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/sider/resource/drugs/1003> <http://www.w3.org/2002/07/owl#sameAs> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/activeIngredient> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/adverseReaction> ?BIGLITERAL .
+ } 
+
+
+#89#
+select * { 
+ ?s1 a <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/drugs> . 
+ ?s1 <http://www.w3.org/2002/07/owl#sameAs> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/activeIngredient> ?URI .
+OPTIONAL {
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/fullName> ?LITERAL .
+}
+ } 
+
+#90#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/sider/resource/drugs/110635> <http://www.w3.org/2002/07/owl#sameAs> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/activeIngredient> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/fullName> ?LITERAL .
+ } 
+
+#91#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/sider/resource/drugs/10631> <http://www.w3.org/2002/07/owl#sameAs> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/activeIngredient> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/adverseReaction> ?BIGLITERAL .
+ } 
+
+#92#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/sider/resource/drugs/10548> <http://www.w3.org/2002/07/owl#sameAs> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/activeIngredient> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/adverseReaction> ?BIGLITERAL .
+ } 
+
+
+#93#
+select * { 
+ ?s1 a <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/side_effects> . 
+ ?s1 <http://www.w3.org/2002/07/owl#sameAs> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?URI .
+OPTIONAL {
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/classDegree> ?LITERAL .
+}
+FILTER(?LITERAL >= 3) .
+ } 
+
+#94#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0001418> <http://www.w3.org/2002/07/owl#sameAs> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/size> ?LITERAL .
+ } 
+
+#95#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0001206> <http://www.w3.org/2002/07/owl#sameAs> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/size> ?LITERAL .
+ } 
+
+#96#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0001126> <http://www.w3.org/2002/07/owl#sameAs> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/classDegree> ?LITERAL .
+ } 
+
+
+#97#
+select * { 
+ ?s1 a <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/drugs> . 
+ ?s1 <http://www.w3.org/2002/07/owl#sameAs> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber> ?URI .
+OPTIONAL {
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/affectedOrganism> ?LITERAL .
+}
+ } 
+
+#98#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/sider/resource/drugs/104803> <http://www.w3.org/2002/07/owl#sameAs> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/biotransformation> ?BIGLITERAL .
+ } 
+
+#99#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/sider/resource/drugs/104758> <http://www.w3.org/2002/07/owl#sameAs> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/biotransformation> ?BIGLITERAL .
+ } 
+
+#100#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/sider/resource/drugs/10100> <http://www.w3.org/2002/07/owl#sameAs> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/description> ?BIGLITERAL .
+ } 
+
+
+#101#
+select * { 
+ ?s1 a <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/drugs> . 
+ ?s1 <http://www.w3.org/2002/07/owl#sameAs> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/brandedDrug> ?URI .
+OPTIONAL {
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/affectedOrganism> ?LITERAL .
+}
+ } 
+
+#102#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/sider/resource/drugs/1125> <http://www.w3.org/2002/07/owl#sameAs> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/description> ?BIGLITERAL .
+ } 
+
+#103#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/sider/resource/drugs/110634> <http://www.w3.org/2002/07/owl#sameAs> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/absorption> ?BIGLITERAL .
+ } 
+
+#104#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/sider/resource/drugs/1071> <http://www.w3.org/2002/07/owl#sameAs> ?s2 . 
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/absorption> ?BIGLITERAL .
+ } 
+
+
+#105#
+select * { 
+ ?s1 a <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/drugs> . 
+ ?s1 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/possibleDiseaseTarget> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases> . 
+ ?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?o .  
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?URI .
+OPTIONAL {
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?LITERAL .
+}
+ } 
+
+#106#
+select * { 
+<http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/35> <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/possibleDiseaseTarget> ?o .
+?s2 a <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases> .
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?o .
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?LITERAL .
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?s3 .
+?s3 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/activeIngredient> ?URI3 .
+ } 
+
+
+#107#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/35> <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/possibleDiseaseTarget> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases> . 
+ ?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?o .  
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?LITERAL .
+ } 
+
+
+#108#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/34> <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/possibleDiseaseTarget> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases> . 
+ ?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?o .  
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?LITERAL .
+ } 
+
+
+#109#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/18> <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/possibleDiseaseTarget> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases> . 
+ ?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?o .  
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?LITERAL .
+ } 
+
+
+#110#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/12> <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/possibleDiseaseTarget> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases> . 
+ ?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?o .  
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?LITERAL .
+ } 
+
+
+#111#
+select * { 
+ ?s1 a <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/drugs> . 
+ ?s1 <http://www.w3.org/2002/07/owl#sameAs> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs> . 
+ ?s2 <http://www.w3.org/2002/07/owl#sameAs> ?o .  
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber> ?URI .
+OPTIONAL {
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/affectedOrganism> ?LITERAL .
+}
+ } 
+
+#112#
+select * { 
+<http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/639> <http://www.w3.org/2002/07/owl#sameAs> ?o .
+?s2 a <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs> .
+?s2 <http://www.w3.org/2002/07/owl#sameAs> ?o .
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/affectedOrganism> ?LITERAL .
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/possibleDiseaseTarget> ?s3 .
+?s3 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?URI3 .
+ } 
+
+
+#113#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/639> <http://www.w3.org/2002/07/owl#sameAs> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer> . 
+ ?s2 <http://www.w3.org/2002/07/owl#sameAs> ?o .  
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/absorption> ?BIGLITERAL .
+ } 
+
+
+#114#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/4147> <http://www.w3.org/2002/07/owl#sameAs> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs> . 
+ ?s2 <http://www.w3.org/2002/07/owl#sameAs> ?o .  
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/description> ?BIGLITERAL .
+ } 
+
+
+#115#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/3754> <http://www.w3.org/2002/07/owl#sameAs> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs> . 
+ ?s2 <http://www.w3.org/2002/07/owl#sameAs> ?o .  
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/brandedDrug> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/description> ?BIGLITERAL .
+ } 
+
+
+#116#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/2315> <http://www.w3.org/2002/07/owl#sameAs> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs> . 
+ ?s2 <http://www.w3.org/2002/07/owl#sameAs> ?o .  
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/absorption> ?BIGLITERAL .
+ } 
+
+
+#117#
+select * { 
+ ?s1 a <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/drugs> . 
+ ?s1 <http://www.w3.org/2002/07/owl#sameAs> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/drugs> . 
+ ?s2 <http://www.w3.org/2002/07/owl#sameAs> ?o .  
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/sideEffect> ?URI .
+OPTIONAL {
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/drugName> ?LITERAL .
+}
+ } 
+
+
+#118#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/442> <http://www.w3.org/2002/07/owl#sameAs> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/drugs> . 
+ ?s2 <http://www.w3.org/2002/07/owl#sameAs> ?o .  
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/sideEffect> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/drugName> ?LITERAL .
+ } 
+
+
+#119#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/2876> <http://www.w3.org/2002/07/owl#sameAs> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/drugs> . 
+ ?s2 <http://www.w3.org/2002/07/owl#sameAs> ?o .  
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/sideEffect> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/drugName> ?LITERAL .
+ } 
+
+
+#120#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/2774> <http://www.w3.org/2002/07/owl#sameAs> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/drugs> . 
+ ?s2 <http://www.w3.org/2002/07/owl#sameAs> ?o .  
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/sideEffect> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/drugName> ?LITERAL .
+ } 
+
+
+#121#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/1239> <http://www.w3.org/2002/07/owl#sameAs> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/drugs> . 
+ ?s2 <http://www.w3.org/2002/07/owl#sameAs> ?o .  
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/sideEffect> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/drugName> ?LITERAL .
+ } 
+
+
+#122#
+select * { 
+ ?s1 a <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/genes> . 
+ ?s1 <http://www.w3.org/2000/01/rdf-schema#label> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/drugs> . 
+ ?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/name> ?o .  
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/activeIngredient> ?URI .
+OPTIONAL {
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/fullName> ?LITERAL .
+}
+ } 
+
+#123#
+select * { 
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/HMS> <http://www.w3.org/2000/01/rdf-schema#label> ?o .
+?s2 a <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/drugs> .
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/name> ?o .
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/activeIngredient> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/fullName> ?LITERAL .
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/genericDrug> ?s3 .
+?s3 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/brandedDrug> ?URI3 .
+ } 
+
+
+#124#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/HMS> <http://www.w3.org/2000/01/rdf-schema#label> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer> . 
+ ?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/name> ?o .  
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/activeIngredient> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/adverseReaction> ?BIGLITERAL .
+ } 
+
+
+#125#
+select * { 
+ ?s1 a <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases> . 
+ ?s1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/drugs> . 
+ ?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/genericDrug> ?o .  
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/activeIngredient> ?URI .
+OPTIONAL {
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/fullName> ?LITERAL .
+}
+ } 
+
+#126#
+select * { 
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/21> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?o .
+?s2 a <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/drugs> .
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/genericDrug> ?o .
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/activeIngredient> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/fullName> ?LITERAL .
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/possibleDiseaseTarget> ?s3 .
+?s3 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?URI3 .
+ } 
+
+
+#127#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/21> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer> . 
+ ?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/genericDrug> ?o .  
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/activeIngredient> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/adverseReaction> ?BIGLITERAL .
+ } 
+
+
+#128#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/15> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/drugs> . 
+ ?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/genericDrug> ?o .  
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/activeIngredient> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/adverseReaction> ?BIGLITERAL .
+ } 
+
+
+#129#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/12> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/drugs> . 
+ ?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/genericDrug> ?o .  
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/activeIngredient> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/adverseReaction> ?BIGLITERAL .
+ } 
+
+
+#130#
+select * { 
+ ?s1 a <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/genes> . 
+ ?s1 <http://www.w3.org/2002/07/owl#sameAs> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/targets> . 
+ ?s2 <http://www.w3.org/2002/07/owl#sameAs> ?o .  
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/bio2rdfSymbol> ?URI .
+OPTIONAL {
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/cellularLocation> ?LITERAL .
+}
+ } 
+
+
+#131#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ABCC2> <http://www.w3.org/2002/07/owl#sameAs> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/targets> . 
+ ?s2 <http://www.w3.org/2002/07/owl#sameAs> ?o .  
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/bio2rdfSymbol> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/goClassificationFunction> ?BIGLITERAL .
+ } 
+
+
+#132#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ABCB1> <http://www.w3.org/2002/07/owl#sameAs> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/targets> . 
+ ?s2 <http://www.w3.org/2002/07/owl#sameAs> ?o .  
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/bio2rdfSymbol> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/goClassificationFunction> ?BIGLITERAL .
+ } 
+
+
+#133#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ABAT> <http://www.w3.org/2002/07/owl#sameAs> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/targets> . 
+ ?s2 <http://www.w3.org/2002/07/owl#sameAs> ?o .  
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugReference> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/reaction> ?BIGLITERAL .
+ } 
+
+
+#134#
+select * { 
+ ?s1 a <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases> . 
+ ?s1 <http://www.w3.org/2002/07/owl#sameAs> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/side_effects> . 
+ ?s2 <http://www.w3.org/2002/07/owl#sameAs> ?o .  
+?s2 <http://xmlns.com/foaf/0.1/page> ?URI .
+OPTIONAL {
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/sideEffectId> ?LITERAL .
+}
+ } 
+
+
+#135#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/116> <http://www.w3.org/2002/07/owl#sameAs> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/side_effects> . 
+ ?s2 <http://www.w3.org/2002/07/owl#sameAs> ?o .  
+?s2 <http://xmlns.com/foaf/0.1/page> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/sideEffectId> ?LITERAL .
+ } 
+
+
+#136#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1154> <http://www.w3.org/2002/07/owl#sameAs> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/side_effects> . 
+ ?s2 <http://www.w3.org/2002/07/owl#sameAs> ?o .  
+?s2 <http://xmlns.com/foaf/0.1/page> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/sideEffectId> ?LITERAL .
+ } 
+
+
+#137#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1129> <http://www.w3.org/2002/07/owl#sameAs> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/side_effects> . 
+ ?s2 <http://www.w3.org/2002/07/owl#sameAs> ?o .  
+?s2 <http://xmlns.com/foaf/0.1/page> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/sideEffectId> ?LITERAL .
+ } 
+
+
+#138#
+select * { 
+ ?s1 a <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs> . 
+ ?s1 <http://www.w3.org/2002/07/owl#sameAs> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/drugs> . 
+ ?s2 <http://www.w3.org/2002/07/owl#sameAs> ?o .  
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/activeIngredient> ?URI .
+OPTIONAL {
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/fullName> ?LITERAL .
+}
+ } 
+
+
+#139#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00917> <http://www.w3.org/2002/07/owl#sameAs> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer> . 
+ ?s2 <http://www.w3.org/2002/07/owl#sameAs> ?o .  
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/activeIngredient> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/adverseReaction> ?BIGLITERAL .
+ } 
+
+
+#140#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00653> <http://www.w3.org/2002/07/owl#sameAs> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/drugs> . 
+ ?s2 <http://www.w3.org/2002/07/owl#sameAs> ?o .  
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/activeIngredient> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/adverseReaction> ?BIGLITERAL .
+ } 
+
+
+#141#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00339> <http://www.w3.org/2002/07/owl#sameAs> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/drugs> . 
+ ?s2 <http://www.w3.org/2002/07/owl#sameAs> ?o .  
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/activeIngredient> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/fullName> ?LITERAL .
+ } 
+
+
+#142#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00242> <http://www.w3.org/2002/07/owl#sameAs> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/drugs> . 
+ ?s2 <http://www.w3.org/2002/07/owl#sameAs> ?o .  
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/activeIngredient> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/adverseReaction> ?BIGLITERAL .
+ } 
+
+
+#143#
+select * { 
+ ?s1 a <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/targets> . 
+ ?s1 <http://www.w3.org/2002/07/owl#sameAs> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/genes> . 
+ ?s2 <http://www.w3.org/2002/07/owl#sameAs> ?o .  
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/bio2rdfSymbol> ?URI .
+OPTIONAL {
+?s2 <http://www.w3.org/2000/01/rdf-schema#label> ?LITERAL .
+}
+ } 
+
+
+#144#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/drugbank/resource/targets/34> <http://www.w3.org/2002/07/owl#sameAs> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/genes> . 
+ ?s2 <http://www.w3.org/2002/07/owl#sameAs> ?o .  
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/bio2rdfSymbol> ?URI .
+?s2 <http://www.w3.org/2000/01/rdf-schema#label> ?LITERAL .
+ } 
+
+
+#145#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00058> <http://www.w3.org/2002/07/owl#sameAs> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/genes> . 
+ ?s2 <http://www.w3.org/2002/07/owl#sameAs> ?o .  
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/bio2rdfSymbol> ?URI .
+?s2 <http://www.w3.org/2000/01/rdf-schema#label> ?LITERAL .
+ } 
+
+
+#146#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00033> <http://www.w3.org/2002/07/owl#sameAs> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/genes> . 
+ ?s2 <http://www.w3.org/2002/07/owl#sameAs> ?o .  
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/bio2rdfSymbol> ?URI .
+?s2 <http://www.w3.org/2000/01/rdf-schema#label> ?LITERAL .
+ } 
+
+
+#147#
+select * { 
+ ?s1 a <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs> . 
+ ?s1 <http://www.w3.org/2002/07/owl#sameAs> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/drugs> . 
+ ?s2 <http://www.w3.org/2002/07/owl#sameAs> ?o .  
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/sideEffect> ?URI .
+OPTIONAL {
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/drugName> ?LITERAL .
+}
+ } 
+
+
+#148#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB06151> <http://www.w3.org/2002/07/owl#sameAs> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/drugs> . 
+ ?s2 <http://www.w3.org/2002/07/owl#sameAs> ?o .  
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/sideEffect> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/drugName> ?LITERAL .
+ } 
+
+
+#149#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01418> <http://www.w3.org/2002/07/owl#sameAs> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/drugs> . 
+ ?s2 <http://www.w3.org/2002/07/owl#sameAs> ?o .  
+?s2 <http://www.w3.org/2000/01/rdf-schema#seeAlso> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/drugName> ?LITERAL .
+ } 
+
+
+#150#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00819> <http://www.w3.org/2002/07/owl#sameAs> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/drugs> . 
+ ?s2 <http://www.w3.org/2002/07/owl#sameAs> ?o .  
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/sideEffect> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/drugName> ?LITERAL .
+ } 
+
+
+#151#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00659> <http://www.w3.org/2002/07/owl#sameAs> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/drugs> . 
+ ?s2 <http://www.w3.org/2002/07/owl#sameAs> ?o .  
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/sideEffect> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/drugName> ?LITERAL .
+ } 
+
+
+#152#
+select * { 
+ ?s1 a <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/drugs> . 
+ ?s1 <http://www.w3.org/2002/07/owl#sameAs> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/drugs> . 
+ ?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/genericDrug> ?o .  
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/activeIngredient> ?URI .
+OPTIONAL {
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/fullName> ?LITERAL .
+}
+ } 
+
+#153#
+select * { 
+<http://www4.wiwiss.fu-berlin.de/sider/resource/drugs/1546> <http://www.w3.org/2002/07/owl#sameAs> ?o .
+?s2 a <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/drugs> .
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/genericDrug> ?o .
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/activeIngredient> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/fullName> ?LITERAL .
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/possibleDiseaseTarget> ?s3 .
+?s3 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?URI3 .
+ } 
+
+
+#154#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/sider/resource/drugs/1546> <http://www.w3.org/2002/07/owl#sameAs> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer> . 
+ ?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/genericDrug> ?o .  
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/activeIngredient> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/adverseReaction> ?BIGLITERAL .
+ } 
+
+
+#155#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/sider/resource/drugs/1349907> <http://www.w3.org/2002/07/owl#sameAs> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/drugs> . 
+ ?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/genericDrug> ?o .  
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/activeIngredient> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/adverseReaction> ?BIGLITERAL .
+ } 
+
+
+#156#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/sider/resource/drugs/1117> <http://www.w3.org/2002/07/owl#sameAs> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/drugs> . 
+ ?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/genericDrug> ?o .  
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/activeIngredient> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/adverseReaction> ?BIGLITERAL .
+ } 
+
+
+#157#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/sider/resource/drugs/1046> <http://www.w3.org/2002/07/owl#sameAs> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/drugs> . 
+ ?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/genericDrug> ?o .  
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/activeIngredient> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/fullName> ?LITERAL .
+ } 
+
+
+#158#
+select * { 
+ ?s1 a <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/drugs> . 
+ ?s1 <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/sideEffect> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases> . 
+ ?s2 <http://www.w3.org/2002/07/owl#sameAs> ?o .  
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?URI .
+OPTIONAL {
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/classDegree> ?LITERAL .
+}
+FILTER (?LITERAL >= 5 )
+ } 
+
+#159#
+select * { 
+<http://www4.wiwiss.fu-berlin.de/sider/resource/drugs/4095> <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/sideEffect> ?o .
+?s2 a <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases> .
+?s2 <http://www.w3.org/2002/07/owl#sameAs> ?o .
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/classDegree> ?LITERAL .
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?s3 .
+?s3 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber> ?URI3 .
+ } 
+
+
+#160#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/sider/resource/drugs/4091> <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/sideEffect> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases> . 
+ ?s2 <http://www.w3.org/2002/07/owl#sameAs> ?o .  
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/classDegree> ?LITERAL .
+FILTER (?LITERAL >= 2 )
+ } 
+
+
+#161#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/sider/resource/drugs/4086> <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/sideEffect> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases> . 
+ ?s2 <http://www.w3.org/2002/07/owl#sameAs> ?o .  
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/classDegree> ?LITERAL .
+FILTER (?LITERAL >= 7 )
+ } 
+
+
+#162#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/sider/resource/drugs/38904> <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/sideEffect> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases> . 
+ ?s2 <http://www.w3.org/2002/07/owl#sameAs> ?o .  
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/classDegree> ?LITERAL .
+FILTER (?LITERAL >= 1 )
+ } 
+
+
+#163#
+select * { 
+ ?s1 a <http://www4.wiwiss.fu-berlin.de/sider/resource/sider/drugs> . 
+ ?s1 <http://www.w3.org/2002/07/owl#sameAs> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drug_interactions> . 
+ ?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?o .  
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?URI .
+OPTIONAL {
+?s2 <http://www.w3.org/2000/01/rdf-schema#label> ?LITERAL .
+}
+ } 
+
+
+#164#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/sider/resource/drugs/1148> <http://www.w3.org/2002/07/owl#sameAs> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drug_interactions> . 
+ ?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?o .  
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?BIGLITERAL .
+ } 
+
+
+#165#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/sider/resource/drugs/1117> <http://www.w3.org/2002/07/owl#sameAs> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drug_interactions> . 
+ ?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?o .  
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?BIGLITERAL .
+ } 
+
+
+#166#
+select * { 
+ <http://www4.wiwiss.fu-berlin.de/sider/resource/drugs/1046> <http://www.w3.org/2002/07/owl#sameAs> ?o . 
+ ?s2 a <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drug_interactions> . 
+ ?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?o .  
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?URI .
+?s2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?LITERAL .
+ } 
+
