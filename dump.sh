@@ -19,6 +19,7 @@ IGNORECASE = 1
 			
 		listclass[o]++
 		print $0 >> dataset "/dump/" filename 
+		print $1 "\t" $3 >> dataset "/entities/" filename 
 		
 		
 	}

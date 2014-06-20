@@ -1,43 +1,54 @@
+#!/bin/bash
 
-kill `ps -ef | grep fuseki | grep -v grep | awk '{print $2}'`
+check=`cat /home/nurrak/fuseki/check`
+if [ $check -eq 0 ]; then
+echo "ZZZ" > checkxx
+
+kill `ps -ef | grep "fuseki-server.jar" | grep -v grep | awk '{print $2}'`
+
 sleep 10s
-rm -Rf data
-mkdir data
-java -jar  fuseki-server.jar --update --loc=data /mydata &
-sleep 10
-./s-put http://localhost:3030/mydata/data default endpoint.ttl
-sleep 50s
+echo "xxx"
+cd /home/nurrak/fuseki
 rm -Rf dailymed
 mkdir dailymed
-java -jar  fuseki-server.jar --port 8001 --update --loc=dailymed /dailymed &
+/usr/bin/java -jar  fuseki-server.jar --port 8001 --update --loc=dailymed /dailymed &
 sleep 50s
-./s-put http://localhost:8001/dailymed/data default ~/dataset/drug/dailymed_dump.nt
-
+./s-put http://localhost:8001/dailymed/data default /home/nurrak/dataset/drug/dailymed_dump.nt
 rm -Rf drugbank
-mkdir drugbank
-java -jar  fuseki-server.jar --port 8000 --update --loc=drugbank /drugbank &
+rm -Rf drugbank1
+mkdir drugbank1
+/usr/bin/java -jar  fuseki-server.jar --port 8000 --update --loc=drugbank1 /drugbank1 &
 sleep 50s
-./s-put http://localhost:8000/drugbank/data default ~/dataset/drug/drugbank_dump.nt
+./s-put http://localhost:8000/drugbank1/data default /home/nurrak/dataset/drug/drugbank1.nt
 
+rm -Rf drugbank2
+mkdir drugbank2
+/usr/bin/java -jar  fuseki-server.jar --port 8004 --update --loc=drugbank2 /drugbank2 &
+sleep 50s
+./s-put http://localhost:8004/drugbank2/data default /home/nurrak/dataset/drug/drugbank2.nt
 
+echo "AAA" > checkxx
 rm -Rf disease
 mkdir disease
-java -jar  fuseki-server.jar --port 8002 --update --loc=disease /disease &
+/usr/bin/java -jar  fuseki-server.jar --port 8002 --update --loc=disease /disease &
 sleep 50s
-./s-put http://localhost:8002/disease/data default ~/dataset/drug/diseasome.nt
+./s-put http://localhost:8002/disease/data default /home/nurrak/dataset/drug/diseasome.nt
 
 rm -Rf sider
 mkdir sider
-java -jar  fuseki-server.jar --port 8003 --update --loc=sider /sider &
+/usr/bin/java -jar  fuseki-server.jar --port 8003 --update --loc=sider /sider &
 sleep 50s
-./s-put http://localhost:8003/sider/data default ~/dataset/drug/sider_dump.nt
+./s-put http://localhost:8003/sider/data default /home/nurrak/dataset/drug/sider_dump.nt
 
+echo "1" > /home/nurrak/fuseki/check
 
+cd /home/nurrak/
+fi
 
-for qService in $1/*Service 
-do
-echo "validate $qService" >> log
-./validate.sh $qService http://localhost:3030/mydata/query
-res=`wc -l < $qService-failed`
-echo "$res queries failed" >> log
-done
+#for qService in $1/*Service 
+#do
+#echo "validate $qService" >> log
+#./validate.sh $qService http://localhost:3030/mydata/query
+#res=`wc -l < $qService-failed`
+#echo "$res queries failed" >> log
+#done

@@ -40,7 +40,9 @@ function clean_up {
 trap clean_up SIGHUP SIGINT SIGTERM
 
 > queryval
-echo $queryset >> /tmp/success 
+#echo $queryset >> /tmp/success 
+echo "QID DReceived DTotal " > $queryset-success
+> $queryset-failed
 while read queryline
 do
 	if [[ $queryline =~ ^#[0-9]+#$ ]]; then
@@ -52,10 +54,27 @@ do
 		echo "$queryline" >> queryval
 	elif [  -f queryval ]; then
 		runquery $queryset $endpoint $qid
-		sleep 5
+		sleep 10
 		
 	fi
-	
+	while read enpointURL
+		do
+		url=`echo $enpointURL | awk '{print $2}'`
+		echo $url
+		check=`./s-query --service $url "ask {?s ?p ?o}" --output=text`
+		if [[ $check != "yes" ]]; then
+			echo "0" > check
+		 	scp check nurrak@vmlidrc02:fuseki/
+			echo "$url done"
+			break
+		fi
+		done < endpoints
+		if [[ $check != "yes" ]]; then
+			sleep 300
+		fi
+		
+	fi	
+
 	
 	
 done < $queryset

@@ -93,7 +93,7 @@ done < hybrid
 	#fi
 		echo "#$qid#" >>$outputdir/queryservice
 		echo "select * { " >>  $outputdir/queryservice
-		tail -n +3 hybrids >> $outputdir/queryservice
+		tail -n +1 hybrids >> $outputdir/queryservice
 		echo "service<$urldataset> {" >> $outputdir/queryservice	
 		cat qfile >> $outputdir/queryservice
 		echo "} } ${newline}" >> $outputdir/queryservice

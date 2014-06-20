@@ -65,7 +65,8 @@ if [ -f $queryset ]; then
 echo "execute $queryset" >> log
 rm cache.db
 > queryfed
-echo "QID T DReceived DTotal Source Ask Construct Describe Select IR Max" > $queryset-fedsuccess
+echo "QID T DReceived DTotal Source Ask Construct Describe Select IR Max Res Std" > $queryset-fedsuccess
+> $queryset-failed
 while read queryline
 do
 	if [[ $queryline =~ ^#[0-9]+#$ ]]; then
@@ -78,6 +79,22 @@ do
 	elif [  -f queryfed ]; then
 		runquery $queryset $endpoints $qid
 		sleep 5
+		
+	while read enpointURL
+		do
+		url=`echo $enpointURL | awk '{print $2}'`
+		echo $url
+		check=`./s-query --service $url "ask {?s ?p ?o}" --output=text`
+		if [[ $check != "yes" ]]; then
+			echo "0" > check
+		 	scp check nurrak@vmlidrc02:fuseki/
+			echo "$url done"
+			break
+		fi
+		done < endpoints
+		if [[ $check != "yes" ]]; then
+			sleep 300
+		fi
 		
 	fi
 
